@@ -33,8 +33,7 @@ if len(target_seq) > len(guide_seq):
 
 pair_key = (guide_seq, target_seq)
 
-guide_len = len(guide_seq)
-if guide_len not in num_mismatches:
+if len(guide_seq) not in num_mismatches:
     raise Exception('Model not found for this guide length.')
 
 if '-' in guide_seq or '-' in target_seq:
